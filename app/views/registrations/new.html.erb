@@ -1,0 +1,51 @@
+
+<div class = "container">
+
+    <h1>Sign Up</h1>
+
+    <%= form_for @user, url:signup_path do |f| %>
+      <% if @user.errors.present? %>
+        <div class = "row">
+          <div id= "error_explanation", class = "text-danger" role = "alert">
+            <ul class = "list-unstyled">
+              <% @user.errors.full_messages.each do |message| %>
+                <li><%=message%></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <%= f.label :first_name %>
+
+
+        <%= f.text_field :first_name %>
+
+
+        <%= f.label :last_name %>
+
+
+        <%= f.text_field :last_name %>
+
+
+
+        <%= f.label :email %>
+
+        <%=f.email_field :email %>
+
+        <%= f.label :password %>
+
+        <%= f.password_field :password %>
+
+        <%= f.label :password_confirmation %>
+
+        <%= f.password_field :password_confirmation %>
+
+        <%= f.submit "Sign Up" %>
+
+      </div>
+    <% end %>
+
+
+</div>

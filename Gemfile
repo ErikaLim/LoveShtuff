@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -44,3 +44,10 @@ end
 gem 'bootstrap-sass', '~>3.3.1'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 gem 'omniauth-foursquare'
+
+gem 'bcrypt'
+
+gem 'dotenv-rails'
+
+gem 'rest-client'
+gem 'nokogiri'

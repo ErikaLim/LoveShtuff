@@ -5,6 +5,17 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'users#index'
 
+  resources :users
+
+  get '/sign-up' => 'registrations#new', as: :signup
+  post '/sign-up' => 'registrations#create'
+  get 'sign-in' => 'authentication#new', as: :signin
+  post 'sign-in' => 'authentication#create'
+  get 'sign-out' => 'authentication#destroy', as: :signout
+
+  get   '/login', :to => 'sessions#new', :as => :login
+match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
+match '/auth/failure', :to => 'sessions#failure', via: [:get, :post]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
