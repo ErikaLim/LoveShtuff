@@ -1,4 +1,6 @@
+<div class = "container-fluid">
 <h1>Sign In</h1>
+
 
 <%= form_tag signin_path do |f| %>
 
@@ -7,23 +9,24 @@
       <%= @sign_in_error %>
     </p>
   <% end %>
-
-  <div>
-    <%= label_tag :email %>
+  <div class="ui form segment">
+    <div class="fields">
+      <div class="field">
+        <%= label_tag :email %>
+      </div>
+      <div class="six wide field">
+        <%= email_field_tag :email %>
+      </div>
+      <div class="field">
+        <%= label_tag :password %>
+      </div>
+      <div class="six wide field">
+        <%= password_field_tag :password %>
+      </div>
+      <div>
+        <%= submit_tag "Sign In"%>
+      </div>
+    </div>
   </div>
-  <div>
-    <%= email_field_tag :email %>
-  </div>
-
-  <div>
-    <%= label_tag :password %>
-  </div>
-  <div>
-    <%= password_field_tag :password %>
-  </div>
-
-  <div>
-    <%= submit_tag "Sign in" %>
-  </div>
-
 <% end %>
+</div>

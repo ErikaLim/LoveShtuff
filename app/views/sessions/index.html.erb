@@ -1,0 +1,8 @@
+<h1>Places We've been</h1>
+<ul>
+<% @checkins_hash.each do |checkins| %>
+
+<li><%= checkins["venue"]["name"]%></li>
+
+<% end %>
+</ul>

@@ -16,34 +16,38 @@
         </div>
       <% end %>
 
-      <div class="row">
-        <%= f.label :first_name %>
-
-
-        <%= f.text_field :first_name %>
-
-
-        <%= f.label :last_name %>
-
-
-        <%= f.text_field :last_name %>
-
-
-
-        <%= f.label :email %>
-
-        <%=f.email_field :email %>
-
-        <%= f.label :password %>
-
-        <%= f.password_field :password %>
-
-        <%= f.label :password_confirmation %>
-
-        <%= f.password_field :password_confirmation %>
-
-        <%= f.submit "Sign Up" %>
-
+      <div class="ui large form segment">
+        <div class="ui vertical segment">
+        <div class="fields">
+          <div class="six wide field">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+          </div>
+          <div class="six wide field">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+          </div>
+          <div class="six wide field">
+            <%= f.label :email %>
+            <%=f.email_field :email %>
+          </div>
+          <div class="six wide field">
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+          </div>
+          <div class="six wide field">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation %>
+          </div>
+          <div class="six wide field">
+          </div>
+          <div class="six wide field">
+          </div>
+          <div class="ten wide field">
+            <%= f.submit class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
       </div>
     <% end %>
 
